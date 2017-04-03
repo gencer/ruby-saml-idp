@@ -5,10 +5,9 @@ require "saml_idp/version"
 Gem::Specification.new do |s|
   s.name = %q{ruby-saml-idp}
   s.version = SamlIdp::VERSION
-  s.platform = Gem::Platform::RUBY
   s.authors = ["Lawrence Pit"]
   s.email = %q{lawrence.pit@gmail.com}
-  s.homepage = %q{http://github.com/lawrencepit/ruby-saml-idp}
+  s.homepage = %q{http://github.com/dev-develop/ruby-saml-idp}
   s.summary = %q{SAML Indentity Provider in ruby}
   s.description = %q{SAML IdP (Identity Provider) library in ruby}
   s.date = Time.now.utc.strftime("%Y-%m-%d")
@@ -22,11 +21,12 @@ Gem::Specification.new do |s|
   s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
   s.rdoc_options = ["--charset=UTF-8"]
+  s.required_ruby_version = ">= 1.8.7"
   s.add_development_dependency "rake"
   s.add_development_dependency("nokogiri", "~> 1.6.8")
   s.add_development_dependency("rspec", "~> 3.0")
-  s.add_development_dependency("ruby-saml", "~> 0.8")
-  s.add_development_dependency("rails", "~> 3.2")
+  s.add_development_dependency("ruby-saml", "~> 1.0")
+  s.add_development_dependency("rails", "~> 5.0")
   s.add_development_dependency("capybara", "~> 2.4.1")
 end
 
